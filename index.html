@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>NADPO</title>
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="">
+  <header>
+    <div class="container">
+      <div class="header__wrapper">
+        <div class="logo">
+          <a class="logo__link" href="#"></a>
+          <img class="logo__img" src="/images/logo.svg"
+            alt="Национальная академия дополнительного профессионального образования">
+          <span class="logo__description">Национальная академия дополнительного профессионального образования</span>
+        </div>
+
+
+        <div class="header__inner" id="menu">
+
+          <nav class="nav">
+            <ul class="nav__list">
+              <li class="nav__item"><a class="nav__link active" href="#">Резюме</a></li>
+              <li class="nav__item"><a class="nav__link" href="#">Вакансии</a></li>
+              <li class="nav__item"><a class="nav__link" href="#">Курсы</a></li>
+              <li class="nav__item"><a class="nav__link" href="#">Новости</a></li>
+              <li class="nav__item"><a class="nav__link" href="#">Статьи</a></li>
+            </ul>
+          </nav>
+
+          <div class="location">
+            <svg class="location__svg" width="12" height="12" viewBox="0 0 12 12" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M6 0C4.81331 0 3.65328 0.351894 2.66658 1.01118C1.67989 1.67047 0.910851 2.60754 0.456726 3.7039C0.00259972 4.80026 -0.11622 6.00666 0.115291 7.17054C0.346802 8.33443 0.918247 9.40353 1.75736 10.2426C2.59648 11.0818 3.66558 11.6532 4.82946 11.8847C5.99335 12.1162 7.19975 11.9974 8.2961 11.5433C9.39246 11.0892 10.3295 10.3201 10.9888 9.33342C11.6481 8.34673 12 7.18669 12 6C11.9983 4.40923 11.3656 2.88411 10.2407 1.75926C9.1159 0.634414 7.59077 0.00172054 6 0V0ZM6 10.5C5.10999 10.5 4.23996 10.2361 3.49994 9.74161C2.75992 9.24715 2.18314 8.54434 1.84254 7.72208C1.50195 6.89981 1.41284 5.99501 1.58647 5.12209C1.7601 4.24918 2.18869 3.44736 2.81802 2.81802C3.44736 2.18868 4.24918 1.7601 5.1221 1.58647C5.99501 1.41283 6.89981 1.50195 7.72208 1.84254C8.54435 2.18314 9.24715 2.75991 9.74162 3.49993C10.2361 4.23996 10.5 5.10998 10.5 6C10.4987 7.19307 10.0241 8.33689 9.18052 9.18052C8.33689 10.0241 7.19307 10.4987 6 10.5ZM3.365 5.038L8.25 3.75L6.975 8.635C6.94568 8.73978 6.88297 8.83213 6.7964 8.89805C6.70984 8.96396 6.60413 8.99984 6.49533 9.00023C6.38652 9.00063 6.28056 8.96552 6.19351 8.90024C6.10647 8.83496 6.04309 8.74306 6.013 8.6385L5.25 6.75L3.3615 6C3.25694 5.96991 3.16504 5.90654 3.09976 5.81949C3.03448 5.73245 2.99937 5.62648 2.99977 5.51768C3.00016 5.40887 3.03604 5.30317 3.10196 5.2166C3.16787 5.13003 3.26022 5.06733 3.365 5.038Z"
+                fill="#7580AB" />
+            </svg>
+            <span class="location__description">Город:</span>
+            <button class="location__button">Москва</button>
+          </div>
+
+          <div class="authorization">
+            <button class="authorization__login">
+              <svg class="authorization__login--svg" width="11" height="11" viewBox="0 0 11 11" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M1.5 1.375H4V0H1.5C1.10218 0 0.720644 0.144866 0.43934 0.402728C0.158035 0.660591 0 1.01033 0 1.375L0 9.625C0 9.98967 0.158035 10.3394 0.43934 10.5973C0.720644 10.8551 1.10218 11 1.5 11H4V9.625H1.5V1.375Z"
+                  fill="#979FBE" />
+                <path
+                  d="M10.5742 4.27319L8.65908 2L7.77338 3.05183L9.19861 4.7431L5 4.75648V6.24352L9.21782 6.23014L7.77045 7.94816L8.65616 9L10.5716 6.72681C10.8455 6.40146 10.9995 5.96052 11 5.50061C11.0005 5.04071 10.8473 4.59933 10.5742 4.27319Z"
+                  fill="#979FBE" />
+              </svg>
+              Вход
+            </button>
+            <button class="authorization__logup">Регистрация</button>
+          </div>
+
+          <div class="social mobile">
+            <ul class="social__list">
+              <li class="social__item"><a class="social__link">ok</a></li>
+              <li class="social__item"><a class="social__link">vk</a></li>
+              <li class="social__item"><a class="social__link">telega</a></li>
+            </ul>
+          </div>
+          <div class="mail mobile">майл</div>
+          <div class="address mobile">адрес</div>
+
+          <button class="close mobile" data-close="menu">close</button>
+
+        </div>
+
+
+
+
+        <div class="authorization mobile">
+          <button class="authorization__login">
+            <svg class="authorization__login--svg" width="11" height="11" viewBox="0 0 11 11" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M1.5 1.375H4V0H1.5C1.10218 0 0.720644 0.144866 0.43934 0.402728C0.158035 0.660591 0 1.01033 0 1.375L0 9.625C0 9.98967 0.158035 10.3394 0.43934 10.5973C0.720644 10.8551 1.10218 11 1.5 11H4V9.625H1.5V1.375Z"
+                fill="#979FBE" />
+              <path
+                d="M10.5742 4.27319L8.65908 2L7.77338 3.05183L9.19861 4.7431L5 4.75648V6.24352L9.21782 6.23014L7.77045 7.94816L8.65616 9L10.5716 6.72681C10.8455 6.40146 10.9995 5.96052 11 5.50061C11.0005 5.04071 10.8473 4.59933 10.5742 4.27319Z"
+                fill="#979FBE" />
+            </svg>
+            Вход
+          </button>
+        </div>
+        <button class="menu__button" data-button="menu">
+        </button>
+      </div>
+    </div>
+  </header>
+
+
+
+  <main>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi deleniti voluptas, voluptatibus enim assumenda
+      rerum incidunt excepturi ratione eveniet porro omnis, consectetur quibusdam dicta maiores dolorem, quia atque
+      minima eius.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi deleniti voluptas, voluptatibus enim assumenda
+      rerum incidunt excepturi ratione eveniet porro omnis, consectetur quibusdam dicta maiores dolorem, quia atque
+      minima eius.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi deleniti voluptas, voluptatibus enim assumenda
+      rerum incidunt excepturi ratione eveniet porro omnis, consectetur quibusdam dicta maiores dolorem, quia atque
+      minima eius.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi deleniti voluptas, voluptatibus enim assumenda
+      rerum incidunt excepturi ratione eveniet porro omnis, consectetur quibusdam dicta maiores dolorem, quia atque
+      minima eius.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi deleniti voluptas, voluptatibus enim assumenda
+      rerum incidunt excepturi ratione eveniet porro omnis, consectetur quibusdam dicta maiores dolorem, quia atque
+      minima eius.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi deleniti voluptas, voluptatibus enim assumenda
+      rerum incidunt excepturi ratione eveniet porro omnis, consectetur quibusdam dicta maiores dolorem, quia atque
+      minima eius.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi deleniti voluptas, voluptatibus enim assumenda
+      rerum incidunt excepturi ratione eveniet porro omnis, consectetur quibusdam dicta maiores dolorem, quia atque
+      minima eius.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi deleniti voluptas, voluptatibus enim assumenda
+      rerum incidunt excepturi ratione eveniet porro omnis, consectetur quibusdam dicta maiores dolorem, quia atque
+      minima eius.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi deleniti voluptas, voluptatibus enim assumenda
+      rerum incidunt excepturi ratione eveniet porro omnis, consectetur quibusdam dicta maiores dolorem, quia atque
+      minima eius.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi deleniti voluptas, voluptatibus enim assumenda
+      rerum incidunt excepturi ratione eveniet porro omnis, consectetur quibusdam dicta maiores dolorem, quia atque
+      minima eius.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi deleniti voluptas, voluptatibus enim assumenda
+      rerum incidunt excepturi ratione eveniet porro omnis, consectetur quibusdam dicta maiores dolorem, quia atque
+      minima eius.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi deleniti voluptas, voluptatibus enim assumenda
+      rerum incidunt excepturi ratione eveniet porro omnis, consectetur quibusdam dicta maiores dolorem, quia atque
+      minima eius.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi deleniti voluptas, voluptatibus enim assumenda
+      rerum incidunt excepturi ratione eveniet porro omnis, consectetur quibusdam dicta maiores dolorem, quia atque
+      minima eius.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi deleniti voluptas, voluptatibus enim assumenda
+      rerum incidunt excepturi ratione eveniet porro omnis, consectetur quibusdam dicta maiores dolorem, quia atque
+      minima eius.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi deleniti voluptas, voluptatibus enim assumenda
+      rerum incidunt excepturi ratione eveniet porro omnis, consectetur quibusdam dicta maiores dolorem, quia atque
+      minima eius.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi deleniti voluptas, voluptatibus enim assumenda
+      rerum incidunt excepturi ratione eveniet porro omnis, consectetur quibusdam dicta maiores dolorem, quia atque
+      minima eius.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi deleniti voluptas, voluptatibus enim assumenda
+      rerum incidunt excepturi ratione eveniet porro omnis, consectetur quibusdam dicta maiores dolorem, quia atque
+      minima eius.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi deleniti voluptas, voluptatibus enim assumenda
+      rerum incidunt excepturi ratione eveniet porro omnis, consectetur quibusdam dicta maiores dolorem, quia atque
+      minima eius.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi deleniti voluptas, voluptatibus enim assumenda
+      rerum incidunt excepturi ratione eveniet porro omnis, consectetur quibusdam dicta maiores dolorem, quia atque
+      minima eius.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi deleniti voluptas, voluptatibus enim assumenda
+      rerum incidunt excepturi ratione eveniet porro omnis, consectetur quibusdam dicta maiores dolorem, quia atque
+      minima eius.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi deleniti voluptas, voluptatibus enim assumenda
+      rerum incidunt excepturi ratione eveniet porro omnis, consectetur quibusdam dicta maiores dolorem, quia atque
+      minima eius.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi deleniti voluptas, voluptatibus enim assumenda
+      rerum incidunt excepturi ratione eveniet porro omnis, consectetur quibusdam dicta maiores dolorem, quia atque
+      minima eius.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi deleniti voluptas, voluptatibus enim assumenda
+      rerum incidunt excepturi ratione eveniet porro omnis, consectetur quibusdam dicta maiores dolorem, quia atque
+      minima eius.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi deleniti voluptas, voluptatibus enim assumenda
+      rerum incidunt excepturi ratione eveniet porro omnis, consectetur quibusdam dicta maiores dolorem, quia atque
+      minima eius.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi deleniti voluptas, voluptatibus enim assumenda
+      rerum incidunt excepturi ratione eveniet porro omnis, consectetur quibusdam dicta maiores dolorem, quia atque
+      minima eius.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi deleniti voluptas, voluptatibus enim assumenda
+      rerum incidunt excepturi ratione eveniet porro omnis, consectetur quibusdam dicta maiores dolorem, quia atque
+      minima eius.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi deleniti voluptas, voluptatibus enim assumenda
+      rerum incidunt excepturi ratione eveniet porro omnis, consectetur quibusdam dicta maiores dolorem, quia atque
+      minima eius.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi deleniti voluptas, voluptatibus enim assumenda
+      rerum incidunt excepturi ratione eveniet porro omnis, consectetur quibusdam dicta maiores dolorem, quia atque
+      minima eius.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi deleniti voluptas, voluptatibus enim assumenda
+      rerum incidunt excepturi ratione eveniet porro omnis, consectetur quibusdam dicta maiores dolorem, quia atque
+      minima eius.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi deleniti voluptas, voluptatibus enim assumenda
+      rerum incidunt excepturi ratione eveniet porro omnis, consectetur quibusdam dicta maiores dolorem, quia atque
+      minima eius.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi deleniti voluptas, voluptatibus enim assumenda
+      rerum incidunt excepturi ratione eveniet porro omnis, consectetur quibusdam dicta maiores dolorem, quia atque
+      minima eius.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi deleniti voluptas, voluptatibus enim assumenda
+      rerum incidunt excepturi ratione eveniet porro omnis, consectetur quibusdam dicta maiores dolorem, quia atque
+      minima eius.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi deleniti voluptas, voluptatibus enim assumenda
+      rerum incidunt excepturi ratione eveniet porro omnis, consectetur quibusdam dicta maiores dolorem, quia atque
+      minima eius.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi deleniti voluptas, voluptatibus enim assumenda
+      rerum incidunt excepturi ratione eveniet porro omnis, consectetur quibusdam dicta maiores dolorem, quia atque
+      minima eius.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi deleniti voluptas, voluptatibus enim assumenda
+      rerum incidunt excepturi ratione eveniet porro omnis, consectetur quibusdam dicta maiores dolorem, quia atque
+      minima eius.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi deleniti voluptas, voluptatibus enim assumenda
+      rerum incidunt excepturi ratione eveniet porro omnis, consectetur quibusdam dicta maiores dolorem, quia atque
+      minima eius.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi deleniti voluptas, voluptatibus enim assumenda
+      rerum incidunt excepturi ratione eveniet porro omnis, consectetur quibusdam dicta maiores dolorem, quia atque
+      minima eius.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi deleniti voluptas, voluptatibus enim assumenda
+      rerum incidunt excepturi ratione eveniet porro omnis, consectetur quibusdam dicta maiores dolorem, quia atque
+      minima eius.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi deleniti voluptas, voluptatibus enim assumenda
+      rerum incidunt excepturi ratione eveniet porro omnis, consectetur quibusdam dicta maiores dolorem, quia atque
+      minima eius.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi deleniti voluptas, voluptatibus enim assumenda
+      rerum incidunt excepturi ratione eveniet porro omnis, consectetur quibusdam dicta maiores dolorem, quia atque
+      minima eius.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi deleniti voluptas, voluptatibus enim assumenda
+      rerum incidunt excepturi ratione eveniet porro omnis, consectetur quibusdam dicta maiores dolorem, quia atque
+      minima eius.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi deleniti voluptas, voluptatibus enim assumenda
+      rerum incidunt excepturi ratione eveniet porro omnis, consectetur quibusdam dicta maiores dolorem, quia atque
+      minima eius.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi deleniti voluptas, voluptatibus enim assumenda
+      rerum incidunt excepturi ratione eveniet porro omnis, consectetur quibusdam dicta maiores dolorem, quia atque
+      minima eius.</p>
+    
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi deleniti voluptas, voluptatibus enim assumenda
+      rerum incidunt excepturi ratione eveniet porro omnis, consectetur quibusdam dicta maiores dolorem, quia atque
+      minima eius.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi deleniti voluptas, voluptatibus enim assumenda
+      rerum incidunt excepturi ratione eveniet porro omnis, consectetur quibusdam dicta maiores dolorem, quia atque
+      minima eius.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi deleniti voluptas, voluptatibus enim assumenda
+      rerum incidunt excepturi ratione eveniet porro omnis, consectetur quibusdam dicta maiores dolorem, quia atque
+      minima eius.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi deleniti voluptas, voluptatibus enim assumenda
+      rerum incidunt excepturi ratione eveniet porro omnis, consectetur quibusdam dicta maiores dolorem, quia atque
+      minima eius.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi deleniti voluptas, voluptatibus enim assumenda
+      rerum incidunt excepturi ratione eveniet porro omnis, consectetur quibusdam dicta maiores dolorem, quia atque
+      minima eius.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi deleniti voluptas, voluptatibus enim assumenda
+      rerum incidunt excepturi ratione eveniet porro omnis, consectetur quibusdam dicta maiores dolorem, quia atque
+      minima eius.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi deleniti voluptas, voluptatibus enim assumenda
+      rerum incidunt excepturi ratione eveniet porro omnis, consectetur quibusdam dicta maiores dolorem, quia atque
+      minima eius.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi deleniti voluptas, voluptatibus enim assumenda
+      rerum incidunt excepturi ratione eveniet porro omnis, consectetur quibusdam dicta maiores dolorem, quia atque
+      minima eius.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi deleniti voluptas, voluptatibus enim assumenda
+      rerum incidunt excepturi ratione eveniet porro omnis, consectetur quibusdam dicta maiores dolorem, quia atque
+      minima eius.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi deleniti voluptas, voluptatibus enim assumenda
+      rerum incidunt excepturi ratione eveniet porro omnis, consectetur quibusdam dicta maiores dolorem, quia atque
+      minima eius.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi deleniti voluptas, voluptatibus enim assumenda
+      rerum incidunt excepturi ratione eveniet porro omnis, consectetur quibusdam dicta maiores dolorem, quia atque
+      minima eius.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi deleniti voluptas, voluptatibus enim assumenda
+      rerum incidunt excepturi ratione eveniet porro omnis, consectetur quibusdam dicta maiores dolorem, quia atque
+      minima eius.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi deleniti voluptas, voluptatibus enim assumenda
+      rerum incidunt excepturi ratione eveniet porro omnis, consectetur quibusdam dicta maiores dolorem, quia atque
+      minima eius.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi deleniti voluptas, voluptatibus enim assumenda
+      rerum incidunt excepturi ratione eveniet porro omnis, consectetur quibusdam dicta maiores dolorem, quia atque
+      minima eius.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi deleniti voluptas, voluptatibus enim assumenda
+      rerum incidunt excepturi ratione eveniet porro omnis, consectetur quibusdam dicta maiores dolorem, quia atque
+      minima eius.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi deleniti voluptas, voluptatibus enim assumenda
+      rerum incidunt excepturi ratione eveniet porro omnis, consectetur quibusdam dicta maiores dolorem, quia atque
+      minima eius.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi deleniti voluptas, voluptatibus enim assumenda
+      rerum incidunt excepturi ratione eveniet porro omnis, consectetur quibusdam dicta maiores dolorem, quia atque
+      minima eius.</p>
+
+  </main>
+
+
+
+
+  <footer>
+
+  </footer>
+  <script src="js/main.js"></script>
+</body>
+
+</html>
