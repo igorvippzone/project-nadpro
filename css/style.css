@@ -249,6 +249,7 @@ button {
   display: flex;
   font-size: 16px;
   font-weight: 600;
+
 }
 
 .authorization button {
@@ -260,7 +261,7 @@ button {
   transition: background-color .3s;
 }
 
-.authorization__login {
+.authorization__login{
   display: flex;
   align-items: center;
 
@@ -269,6 +270,8 @@ button {
 
 .authorization__login:hover {
   background-color: transparent;
+  color: var(--primary-text-color);
+  
 }
 
 .authorization__logup:hover {
@@ -290,11 +293,23 @@ button {
 
 .authorization.mobile button {
   margin-right: 20px;
+  background-color: transparent;
+  border-color: #dcdfea;
+}
+
+
+.authorization.mobile .authorization__login:hover {
+  background-color: transparent;
+  color: var(--primary-text-color);
+  
+}
+.authorization.mobile .authorization__login--svg path {
+  fill: var(--secondary-text-color);
 }
 
 
 .menu__button {
-  background: url(/images/icon-burger.svg) no-repeat center/cover;
+  background: url(../images/icon-burger.svg) no-repeat center/cover;
   height: 27px;
   width: 30px;
   border: none;
