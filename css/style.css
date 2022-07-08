@@ -141,6 +141,7 @@ section {
 .noscroll {
   overflow: hidden;
   position: fixed;
+  height: 100vh;
 }
 
 .hide {
@@ -473,24 +474,14 @@ section {
   padding: 50px 40px;
   overflow: hidden;
 
-  background-color: var(--other-color-1);
-
-  background-repeat: no-repeat;
-  background-position: 10% bottom,
-    left center,
-    35% 10%,
-    10% 40%;
-  background-size: contain, contain, 26px, 26px;
-
-
   display: flex;
   flex-direction: column;
   align-items: flex-end;
 
-  transition: background-color .3s;
+
 }
 
-.header-main__card.work {
+/* .header-main__card.work {
   background-image: url(../images/bg-woman.png),
     url(../images/bg-wave.svg),
     url(../images/bg-icon-1.png),
@@ -502,7 +493,7 @@ section {
     url(../images/bg-wave.svg),
     url(../images/bg-icon-1.png),
     url(../images/bg-icon-2.png);
-}
+} */
 
 
 .header-main__card:last-child {
@@ -515,6 +506,7 @@ section {
   font-size: 24px;
   font-weight: 700;
   text-transform: uppercase;
+  z-index: 10;
 }
 
 .card__subtitle {
@@ -524,8 +516,10 @@ section {
   text-transform: lowercase;
   background-repeat: no-repeat;
   background-position: left center;
-  background-size: 15px;
+  background-size: contain;
   padding-left: 25px;
+  z-index: 10;
+  transition: background-image .3s;
 }
 
 .header-main__card.work .card__subtitle {
@@ -546,6 +540,75 @@ section {
   background-position: center;
   background-repeat: no-repeat;
   background-size: 6px;
+  z-index: 10;
+  order: 1;
+  transition: background-color .3s;
+}
+
+.header-main__inner {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 0;
+
+
+  background-color: var(--other-color-1);
+
+  background-repeat: no-repeat;
+  background-position: 10% bottom,
+    left center,
+    35% 10%,
+    10% 40%;
+  background-size: contain, contain, 26px, 26px;
+
+  transition: background-color .3s, background-image .3s;
+}
+
+.header-main__card.work .header-main__inner {
+  background-image: url(../images/bg-woman.png),
+    url(../images/bg-wave.svg),
+    url(../images/bg-icon-1-white.png),
+    url(../images/bg-icon-2-white.png);
+}
+
+.header-main__card.resume .header-main__inner {
+  background-image: url(../images/bg-man.png),
+    url(../images/bg-wave.svg),
+    url(../images/bg-icon-1-white.png),
+    url(../images/bg-icon-2-white.png);
+}
+.card__button:hover{
+  background-color: var(--light-main-color);
+}
+
+.header-main__card.work .card__button:hover~.header-main__inner {
+
+  background-color: var(--main-color);
+
+  background-image: url(../images/bg-woman.png),
+    url(../images/bg-wave.svg),
+    url(../images/bg-icon-1-gray.png),
+    url(../images/bg-icon-2-gray.png);
+}
+
+.header-main__card.resume .card__button:hover~.header-main__inner {
+
+  background-color: var(--main-color);
+
+  background-image: url(../images/bg-man.png),
+    url(../images/bg-wave.svg),
+    url(../images/bg-icon-1-gray.png),
+    url(../images/bg-icon-2-gray.png);
+}
+
+
+.header-main__card.work .card__button:hover~.card__subtitle{
+  background-image: url(../images/icon-work-dark.svg);
+}
+.header-main__card.resume .card__button:hover~.card__subtitle{
+  background-image: url(../images/icon-resume-dark.svg);
 }
 
 /* .card__button::after {
@@ -941,7 +1004,7 @@ transition: transform .3s;
     transform: translateX(-100%);
     transition: transform .3s;
     z-index: 20;
-    height: 100vh;
+    
   }
 
 
@@ -1361,14 +1424,46 @@ transition: transform .3s;
   }
 }
 
-/* 
-.modal{
-  position: fixed;
-  
+
+.modal {
+  position: absolute;
+
   top: 0;
   right: 0;
   left: 0;
   bottom: 0;
   z-index: 100;
   background-color: rgba(0, 13, 66, .4);
-} */
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal .content {
+  background-color: var(--light-color);
+  position: relative;
+
+  padding: 40px;
+  border-radius: 20px;
+  max-width: 520px;
+}
+
+.modal h2 {
+  font-size: 26px;
+  text-transform: none;
+  margin-bottom: 20px;
+}
+
+.modal .close {
+  position: absolute;
+  display: block;
+  border: none;
+  border-radius: 50%;
+  top: 0;
+  right: -44px;
+
+  width: 30px;
+  height: 30px;
+  background: url(../images/icon-close-modal.svg) no-repeat center/10px, var(--primary-text-color);
+}

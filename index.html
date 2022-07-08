@@ -42,11 +42,11 @@
                 fill="#7580AB" />
             </svg>
             <span class="location__description">Город:</span>
-            <button class="location__button">Москва</button>
+            <button class="location__button" data-button="city">Москва</button>
           </div>
 
           <div class="authorization">
-            <button class="authorization__login">
+            <button class="authorization__login" data-button="login">
               <svg class="authorization__login--svg" width="11" height="11" viewBox="0 0 11 11" fill="none"
                 xmlns="http://www.w3.org/2000/svg">
                 <path
@@ -58,7 +58,7 @@
               </svg>
               Вход
             </button>
-            <button class="authorization__logup">Регистрация</button>
+            <button class="authorization__logup" data-button="registration">Регистрация</button>
           </div>
 
           <div class="social mobile">
@@ -79,7 +79,7 @@
 
 
         <div class="authorization mobile">
-          <button class="authorization__login">
+          <button class="authorization__login" data-button="login">
             <svg class="authorization__login--svg" width="11" height="11" viewBox="0 0 11 11" fill="none"
               xmlns="http://www.w3.org/2000/svg">
               <path
@@ -99,14 +99,16 @@
       <div class="header__bottom">
         <section class="header__main">
           <div class="header-main__card work">
+            <a class="card__button" href="#"></a>
             <h3 class="card__title">Ищу работу</h3>
             <p class="card__subtitle">Вакансии</p>
-            <a class="card__button" href="#"></a>
+            <div class="header-main__inner"></div>
           </div>
           <div class="header-main__card resume">
+            <a class="card__button" href="#"></a>
             <h3 class="card__title">Ищу сотрудников</h3>
             <p class="card__subtitle">Резюме</p>
-            <a class="card__button" href="#"></a>
+            <div class="header-main__inner"></div>
           </div>
         </section>
         <section class="header__advantages">
@@ -282,9 +284,13 @@
     </div>
 
   </footer>
-<div class="modal">
-  
-</div>
+  <!-- <div class="modal">
+  <div class="content">
+    <h2>Выберете город</h2>
+
+    <button class="close"></button>
+  </div>
+</div> -->
 
   <script src="js/main.js"></script>
 </body>
