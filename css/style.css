@@ -142,6 +142,7 @@ section {
   overflow: hidden;
   position: fixed;
   height: 100vh;
+  width: 100%;
 }
 
 .hide {

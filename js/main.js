@@ -2,20 +2,12 @@ const body = document.querySelector("body");
 const buttonsOpenModal = document.querySelectorAll("[data-button]");
 
 function noScroll() {
-  if (body.classList.contains("noscroll")) {
-    body.style.paddingRight = 0;
-    body.classList.remove("noscroll");
-  } else {
-    const bodyWidth = body.offsetWidth;
-    const windowWidth = window.innerWidth;
-    const scrollWidth = windowWidth - bodyWidth;
-    body.classList.add("noscroll");
-    body.style.paddingRight = scrollWidth + "px";
-  }
+  const bodyWidth = body.offsetWidth;
+  const windowWidth = window.innerWidth;
+  const scrollWidth = windowWidth - bodyWidth;
+  body.classList.add("noscroll");
+  body.style.paddingRight = scrollWidth + "px";
 }
-
-
-
 
 function handlerToggle(button) {
   noScroll();
@@ -29,7 +21,8 @@ function handlerToggle(button) {
   const handleClose = () => {
     modal.classList.remove("active");
     button.classList.remove("active");
-    noScroll();
+    body.style.paddingRight = 0;
+    body.classList.remove("noscroll");
     buttonClose.removeEventListener("click", handleClose);
   };
 
@@ -85,5 +78,5 @@ function createModal(title) {
   modalWrapper.prepend(modalContent);
 
   body.prepend(modalWrapper);
-  noScroll()
+  noScroll();
 }
