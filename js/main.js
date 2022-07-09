@@ -1,12 +1,17 @@
 const body = document.querySelector("body");
 const buttonsOpenModal = document.querySelectorAll("[data-button]");
 
+const menu = document.getElementById("menu");
+const isActiveMenu = menu.classList.contains("active");
+
 function noScroll() {
-  const bodyWidth = body.offsetWidth;
-  const windowWidth = window.innerWidth;
-  const scrollWidth = windowWidth - bodyWidth;
-  body.classList.add("noscroll");
-  body.style.paddingRight = scrollWidth + "px";
+  if (!isActiveMenu) {
+    const bodyWidth = body.offsetWidth;
+    const windowWidth = window.innerWidth;
+    const scrollWidth = windowWidth - bodyWidth;
+    body.classList.add("noscroll");
+    body.style.paddingRight = scrollWidth + "px";
+  }
 }
 
 function handlerToggle(button) {
@@ -60,21 +65,32 @@ buttonsOpenModal.forEach((button) => {
 });
 
 function createModal(title) {
+  function handleClose() {
+    console.log('lol');
+    if (!isActiveMenu) {
+      body.style.paddingRight = 0;
+      body.classList.remove("noscroll");
+    }
+
+    buttonClose.removeEventListener("click", handleClose);
+    modalWrapper.remove();
+  }
+
   const modalWrapper = document.createElement("div");
-  modalWrapper.classList.add("modal");
-
   const modalContent = document.createElement("div");
-  modalContent.classList.add("content");
-
   const buttonClose = document.createElement("button");
+  const mainTitle = document.createElement("h2");
+
+  modalWrapper.classList.add("modal");
+  modalContent.classList.add("content");
   buttonClose.classList.add("close");
 
-  const mainTitle = document.createElement("h2");
+  buttonClose.addEventListener("click", handleClose);
+
   mainTitle.textContent = title;
 
   modalContent.prepend(mainTitle);
   modalContent.append(buttonClose);
-
   modalWrapper.prepend(modalContent);
 
   body.prepend(modalWrapper);
