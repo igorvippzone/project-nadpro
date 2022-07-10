@@ -450,8 +450,17 @@ section {
 
 .menu__button.active {
   opacity: 0;
-  z-index: -1;
+  z-index: 15;
+  position: absolute;
+  background: transparent;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  width: 100vw;
+  height: 100%;
 }
+
 
 
 .mobile {
@@ -1467,4 +1476,11 @@ transition: transform .3s;
   width: 30px;
   height: 30px;
   background: url(../images/icon-close-modal.svg) no-repeat center/10px, var(--primary-text-color);
+}
+
+
+/* city */
+.city__list{
+  max-height: 280px;
+  overflow: auto;
 }
