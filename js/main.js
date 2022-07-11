@@ -5,7 +5,7 @@ const menu = document.getElementById("menu");
 
 const arrCities = [
   "Москва",
-  "Нижний",
+  "Нижний Новгород, Нижегородская область",
   "Владимир",
   "Гороховец",
   "Уфа",
@@ -66,22 +66,25 @@ function handlerToggle(event) {
 }
 
 function createModal(event) {
-  const title = event.target.getAttribute("data-title");
-  console.log("1111", event.target);
-  console.log(title);
+  const title = this.getAttribute("data-title");
   function handleClose(event) {
     const close = event.target;
     if (
       close.classList.contains("modal") ||
       close.classList.contains("close")
     ) {
-      const isActiveMenu = menu.classList.contains("active");
-      if (!isActiveMenu) {
-        body.style.paddingRight = 0;
-        body.classList.remove("noscroll");
-      }
-      modalWrapper.removeEventListener("click", handleClose);
-      modalWrapper.remove();
+      modalContent.classList.add("content", "animate__backOutDown");
+      modalWrapper.classList.add("animate__fadeOut")
+      setTimeout(() => {
+        const isActiveMenu = menu.classList.contains("active");
+        if (!isActiveMenu) {
+          body.style.paddingRight = 0;
+          body.classList.remove("noscroll");
+        }
+        modalWrapper.removeEventListener("click", handleClose);
+
+        modalWrapper.remove();
+      }, "300");
     }
   }
 
@@ -90,8 +93,18 @@ function createModal(event) {
   const buttonClose = document.createElement("button");
   const mainTitle = document.createElement("h2");
 
-  modalWrapper.classList.add("modal");
-  modalContent.classList.add("content");
+  modalWrapper.classList.add(
+    "modal",
+    "animate__animated",
+    "animate__faster",
+    "animate__fadeIn"
+  );
+  modalContent.classList.add(
+    "content",
+    "animate__animated",
+    "animate__faster",
+    "animate__backInDown"
+  );
   buttonClose.classList.add("close");
 
   modalWrapper.addEventListener("click", handleClose);
@@ -119,6 +132,7 @@ function createModal(event) {
 function createCityModal(arrCities) {
   const searchInput = document.createElement("input");
   searchInput.classList.add("modal__search-input");
+  searchInput.setAttribute("placeholder","Введите название города...")
   const listCities = document.createElement("ul");
   listCities.classList.add("city__list");
   arrCities.forEach((city) => {
@@ -136,6 +150,5 @@ buttonsOpenModal.forEach((button) => {
     button.addEventListener("click", handlerToggle);
   } else {
     button.addEventListener("click", createModal);
-    console.log("1");
   }
 });
